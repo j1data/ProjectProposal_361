@@ -119,7 +119,7 @@
     \textsc{\large Computational Techniques for Aerospace Design}\\[0.2 cm]
 	\textsc{\Large AERE 361}\\[0.5 cm]				% Course Code
 	\textsc{\Large Project Proposal}\\[0.2 cm]
-	\textsc{\Large TEAM NAME HERE}\\[0.2 cm]
+	\textsc{\Large Team Gimli}\\[0.2 cm]
 	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	%{ \huge \bfseries \thetitle}\\
 	
@@ -128,12 +128,12 @@
 		
 			\begin{flushleft} 
 			\emph{Team Member Names :} \\
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
+			Schendel, Joseph\linebreak
+			Pullman, Justin\linebreak
+			Nandakumar, Sooraj\linebreak
+			McGill, Blake\linebreak
+			Lewandowski, Andrew\linebreak
+			Alexander, Kasey\linebreak
 			
 		\end{flushleft}
 	\end{minipage}\\[2 cm]
@@ -169,16 +169,14 @@ When you create your ``ref.bib'' file, don't forget to follow the standards for 
 \section{PROBLEM SOLUTION}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=4.5in]{cpx01.jpg}
-	\caption{This is the Circuit Playground Express}
+	\includegraphics[width=6in]{parkingDiagram.jpg}
+	\caption{Example and Circuit Diagram}
 	\label{fig:cpx}
 \end{figure}
-Here go over your approach to your solution and what your solution is. You must include at least one image that shows your concept. This image can be a sketch or drawing or some pictures that show your concept. Make sure you reference the image(s) like this - Figure \ref{fig:cpx}. Finally, make sure you replace the stock image I included. You should also reference any sources you had from your problem statement as well.
+The solution that was decided on, is to place sensors in each parking spot to detect if there is a vehicle occupying it. This sensor can be a pressure, ultrasonic, or electromagnetic sensor. When a parking spot is empty a light strip at the entrance to the parking spot will turn green indicating the spot it open and available. When a vehicle drives into the spot and over the sensor, the light will turn off and a signal will be sent to the micro-controller (Adafruit Circuit Playground Express). The micro-controller will then update an LCD display positioned at the entrance of the parking lot, indicating how many open spots there are in each row. The micro-controller will also update a website with the number of spots open out of the total number of spots and a percentage of how full the parking lot is. These three functionalities will allow drivers to check if there are parking spots prior to driving over, update drivers who are looking for an open lot, and help indicate to drivers where free parking spots are. Figure \ref{fig:cpx} shows what a parking lot row would look like with our system implemented. The light strip at the base of parking spot are green when the spot it empty and off when the spot it filled. There is a billboard LCD at the entrance to the parking lot showing the breakdown of how many empty spots there are per row. On the right side of Figure \ref{fig:cpx} there is a breakdown of the wiring diagram for 3 parking spots. Each parking spot has a sensor and a light strip, which communicate with the microprocessor which updates the website and LCD billboard. 
 
-You must also include a table that lists all the parts that you wish to have. As announced in class, you will have the parts listed in Table \ref{table:parts_list}. We have plenty of two additional parts. Those are a conductive adhesive strip and a neopixel strip. I do have some other parts, such as arcade buttons and some additional sensors. You can certainly ask for something, and I will see what I can do. Change the table below to reflect the parts you are requesting.
-
-\begin{table}[ht]
-  \caption{Parts available for teams}
+\begin{table}[!h]
+  \caption{Parts required for project}
   \label{table:parts_list}
   \begin{center}
   \begin{tabular}{|p{3in}|c|}
@@ -199,11 +197,9 @@ You must also include a table that lists all the parts that you wish to have. As
   \hline
   LCD & 1 \\
   \hline
-  
   \end{tabular}
   \end{center}
-  \end{table}
-
+\end{table}
 \section{CONCLUSION}
 Finally, wrap up your proposal. This only needs to be one or two paragraphs, but it should conclude with what you plan to do and the why and how. Yes, this may seem repetitive, but that is intentional. Do not forget to update your references as those will appear below in a seperate page.
 
