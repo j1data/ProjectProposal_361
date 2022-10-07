@@ -4,7 +4,7 @@
 %\usepackage[tocindentauto]{tocstyle}
 %\usetocstyle{KOMAlike} %the previous line resets it
 %\usepackage{natbib}
-\usepackage{biblatex}
+\usepackage[style=numeric,backend=bibtex]{biblatex}
 \addbibresource[]{ref.bib}
 \usepackage{url}
 \usepackage[utf8]{inputenc}
@@ -173,9 +173,10 @@ A fourth feature we have as a backup or if we have time would be a timer system.
 
 
 \section{PROBLEM STATEMENT}
+
 The problem we are trying to solve is parking on campus. It is a big headache trying to figure out where the best place to park is. Knowing how full a parking lot is, where available parking spots are, or if the best spots at a specific location are available are all problems we are trying to tackle. The solution we are going to make improves parking at different levels. It takes a tool found at airports that helps with parking and incorporates it into locations around here on campus, starting with the armory. The goal is to create a system that makes parking less of a headache by displaying information at different locations. Information such as how full the lot is and number of spots available in a specific row. Further information such as where the most open spots are, and how busy the parking lot typically is will also be explored. 
 
-Taking inspiration from what is done at airports and implimenting it at ISU is the key philosophy for this idea. At airports, wayfinding is an important concept requires consideration. "Studies have shown the importance of wayfinding and give it significant weight with respect in the determination of the overall LOS of the terminal." (cite). Parking navigation is an example of wayfinding, and LOS simply stands for level of service. Meaning, how helpful parking directions are and parking navigation is a big thing that is considered at airports as it improves the quality of life. That is the purpose of pursuing this idea. Making parking easier for everyone. 
+Taking inspiration from what is done at airports and implementing it at ISU is the key philosophy for this idea. At airports, wayfinding is an important concept requires consideration. "Studies have shown the importance of wayfinding and give it significant weight with respect in the determination of the overall LOS of the terminal." \cite{Harding}. Parking navigation is an example of wayfinding, and LOS simply stands for level of service. Meaning, how helpful parking directions are and parking navigation is a big thing that is considered at airports as it improves the quality of life. That is the purpose of pursuing this idea. Making parking easier for everyone. 
 
 \section{PROBLEM SOLUTION}
 \begin{figure}[!h]
@@ -184,7 +185,7 @@ Taking inspiration from what is done at airports and implimenting it at ISU is t
 	\caption{Example and Circuit Diagram}
 	\label{fig:cpx}
 \end{figure}
-The solution that was decided on, is to place sensors in each parking spot to detect if there is a vehicle occupying it. This sensor can be a pressure, ultrasonic, or electromagnetic sensor. When a parking spot is empty a light strip at the entrance to the parking spot will turn green indicating the spot it open and available. When a vehicle drives into the spot and over the sensor, the light will turn off and a signal will be sent to the micro-controller (Adafruit Circuit Playground Express). The micro-controller will then update an LCD display positioned at the entrance of the parking lot, indicating how many open spots there are in each row. The micro-controller will also update a website with the number of spots open out of the total number of spots and a percentage of how full the parking lot is. These three functionalities will allow drivers to check if there are parking spots prior to driving over, update drivers who are looking for an open lot, and help indicate to drivers where free parking spots are. Figure \ref{fig:cpx} shows what a parking lot row would look like with our system implemented. The light strip at the base of parking spot are green when the spot it empty and off when the spot it filled. There is a billboard LCD at the entrance to the parking lot showing the breakdown of how many empty spots there are per row. On the right side of Figure \ref{fig:cpx} there is a breakdown of the wiring diagram for 3 parking spots. Each parking spot has a sensor and a light strip, which communicate with the microprocessor which updates the website and LCD billboard. 
+The solution that was decided on, is to place sensors in each parking spot to detect if there is a vehicle occupying it. This sensor can be a pressure, ultrasonic, or electromagnetic sensor. When a parking spot is empty a light strip at the entrance to the parking spot will turn green indicating the spot it open and available. When a vehicle drives into the spot and over the sensor, the light will turn off and a signal will be sent to the micro-controller (Adafruit Circuit Playground Express). The micro-controller will then update an LCD display positioned at the entrance of the parking lot, indicating how many open spots there are in each row. The micro-controller will also update a website with the number of spots open out of the total number of spots and a percentage of how full the parking lot is. These three functionalities will allow drivers to check if there are parking spots prior to driving over, update drivers who are looking for an open lot, and help indicate to drivers where free parking spots are. Figure \ref{fig:cpx} shows what a parking lot row would look like with our system implemented. The light strip at the base of parking spot are green when the spot it empty and off when the spot it filled. There is a billboard LCD at the entrance to the parking lot showing the breakdown of how many empty spots there are per row. On the right side of Figure \ref{fig:cpx} there is a breakdown of the wiring diagram for 3 parking spots. Each parking spot has a sensor and a light strip, which communicate with the microprocessor which updates the website and LCD billboard. According to a study done by the Transportation Research Board \cite{Harding} these systems aid in the experience of parking, making parking a stress free activity so that patrons can effortlessly get to their destination. Students are under enough stress trying to keep up with their project, labs and exams, they do not need added stress of finding a parking space. 
 
 \begin{table}[!h]
   \caption{Parts required for project}
@@ -215,19 +216,9 @@ The solution that was decided on, is to place sensors in each parking spot to de
 The primary goal of this project is to assist users of a parking lot to save time. We implemented multiple features to be able to achieve this. Our main concept is to install sensors in parking spots that detects the presence of a car. This data is used to calculate the number of parking spots available. We plan on implementing lights at the entry of the parking spot, as shown in the diagram. These will allow the user to see where the empty parking spot is, which allows them to navigate to the spot efficiently. We will display the number of spots left and the row where the empty spot is on an LCD at the entrance of the parking lot. We also plan on displaying this information on a website which will allow users to plan ahead of time.
 
 \newpage
-%\section{References}
+\section{References}
 \printbibliography[heading=subbibintoc]
-@book{alma9920504300302756,  \\Not sure what is needed from this to make it work, its just copied from the ISU library.
-address = {Place of publication not identified},
-isbn = {1-62198-285-8},
-title = {Wayfinding and signing guidelines for airport terminals and landside},
-keywords = {Airports -- Design and construction -- United States},
-language = {eng;English},
-year = {2011},
-publisher = {Transportation Research Board},
-series = {ACRP report Wayfinding and signing guidelines for airport terminals and landside},
-}
 %\bibliographystyle{plain}
-%\bibliography{ref}
+%\bibliography{ref.bib}
 
 \end{document}
